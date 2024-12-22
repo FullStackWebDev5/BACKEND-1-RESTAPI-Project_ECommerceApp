@@ -1,23 +1,45 @@
 const orderModel = require('./order.model');
 const cartModel = require('../cart/cart.model');
+const productModel = require('../product/product.model');
 
 const placeOrder = (req, res) => {
-  const { cid } = req.headers
+  const custId = req.user.id
   const { paymentMethod } = req.body
-  const cartItems = cartModel.getCartItems(cid)
+  const cartItems = cartModel.getCartItems(custId)
+
+  if(!paymentMethod) {
+    return res.status(400).json({
+      status: 'FAILED',
+      message: 'Payment method missing. Please specify your payment method!'
+    })
+  }
+
+  if(cartItems.length == 0) {
+    return res.status(400).json({
+      status: 'FAILED',
+      message: 'Cart is empty. Please add items to your cart to place an order!'
+    })
+  }
+
+  let totalAmount = 0 
+  cartItems.forEach((cI) => {
+    const productPrice = productModel.getProductPrice(cI.productId)
+    totalAmount += productPrice * cI.quantity
+  })
 
   const newOrder = {
-    customerId: Number(cid),
+    customerId: Number(custId),
     products: cartItems.map(item => ({
-      productId: item.productId,
+      productId: productModel.getProductName(item.productId),
       quantity: item.quantity
     })),
     paymentMethod,
+    totalAmount: totalAmount.toFixed(2),
     time: new Date().toLocaleString()
   }
 
   orderModel.addOrder(newOrder)
-  cartModel.emptyCart(cid)
+  cartModel.emptyCart(custId)
   
   res.json({
     status: 'SUCCESS',
@@ -26,8 +48,8 @@ const placeOrder = (req, res) => {
 }
 
 const getOrders = (req, res) => {
-  const { cid } = req.headers
-  const orders = orderModel.getOrders(cid)
+  const custId = req.user.id
+  const orders = orderModel.getOrders(custId)
   res.json({
     status: 'SUCCESS',
     data: orders
@@ -35,8 +57,8 @@ const getOrders = (req, res) => {
 }
 
 const getOrderById = (req, res) => {
-  const { id } = req.params
-  const orders = orderModel.getOrderById(id)
+  const custId = req.user.id
+  const orders = orderModel.getOrderById(custId)
   res.json({
     status: 'SUCCESS',
     data: orders

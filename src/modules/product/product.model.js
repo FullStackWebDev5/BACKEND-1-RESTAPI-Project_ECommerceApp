@@ -5,7 +5,7 @@ const PRODUCTS = [
     name: 'Product 1',
     price: 1199,
     brand: 'Brand A',
-    ratings: [],
+    ratings: {}
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const PRODUCTS = [
     name: 'Product 2',
     price: 2499,
     brand: 'Brand A',
-    ratings: []
+    ratings: {}
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const PRODUCTS = [
     name: 'Product 3',
     price: 1899,
     brand: 'Brand B',
-    ratings: []
+    ratings: {}
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const PRODUCTS = [
     name: 'Product 4',
     price: 1599,
     brand: 'Brand C',
-    ratings: []
+    ratings: {}
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const PRODUCTS = [
     name: 'Product 5',
     price: 899,
     brand: 'Brand B',
-    ratings: []
+    ratings: {}
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const PRODUCTS = [
     name: 'Product 6',
     price: 1399,
     brand: 'Brand D',
-    ratings: []
+    ratings: {}
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const PRODUCTS = [
     name: 'Product 7',
     price: 5999,
     brand: 'Brand C',
-    ratings: []
+    ratings: {}
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const PRODUCTS = [
     name: 'Product 8',
     price: 2699,
     brand: 'Brand D',
-    ratings: []
+    ratings: {}
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const PRODUCTS = [
     name: 'Product 9',
     price: 1499,
     brand: 'Brand D',
-    ratings: []
+    ratings: {}
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const PRODUCTS = [
     name: 'Product 10',
     price: 1199,
     brand: 'Brand C',
-    ratings: []
+    ratings: {}
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@ const PRODUCTS = [
     "name": "Product 11",
     "price": 1299,
     "brand": "Brand A",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@ const PRODUCTS = [
     "name": "Product 12",
     "price": 3499,
     "brand": "Brand B",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@ const PRODUCTS = [
     "name": "Product 13",
     "price": 999,
     "brand": "Brand C",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@ const PRODUCTS = [
     "name": "Product 14",
     "price": 7999,
     "brand": "Brand D",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@ const PRODUCTS = [
     "name": "Product 15",
     "price": 699,
     "brand": "Brand A",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@ const PRODUCTS = [
     "name": "Product 16",
     "price": 1799,
     "brand": "Brand B",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@ const PRODUCTS = [
     "name": "Product 17",
     "price": 1099,
     "brand": "Brand C",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@ const PRODUCTS = [
     "name": "Product 18",
     "price": 1199,
     "brand": "Brand D",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 19,
@@ -149,15 +149,15 @@ const PRODUCTS = [
     "name": "Product 19",
     "price": 2399,
     "brand": "Brand A",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 20,
     "category": "Furniture",
     "name": "Product 20",
-    "price": 8999,
+    "price": 1399,
     "brand": "Brand B",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@ const PRODUCTS = [
     "name": "Product 21",
     "price": 1499,
     "brand": "Brand C",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@ const PRODUCTS = [
     "name": "Product 22",
     "price": 2599,
     "brand": "Brand D",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@ const PRODUCTS = [
     "name": "Product 23",
     "price": 799,
     "brand": "Brand A",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@ const PRODUCTS = [
     "name": "Product 24",
     "price": 1399,
     "brand": "Brand B",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@ const PRODUCTS = [
     "name": "Product 25",
     "price": 1599,
     "brand": "Brand C",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@ const PRODUCTS = [
     "name": "Product 26",
     "price": 2999,
     "brand": "Brand D",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@ const PRODUCTS = [
     "name": "Product 27",
     "price": 1899,
     "brand": "Brand A",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 28,
@@ -221,7 +221,7 @@ const PRODUCTS = [
     "name": "Product 28",
     "price": 999,
     "brand": "Brand B",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 29,
@@ -229,7 +229,7 @@ const PRODUCTS = [
     "name": "Product 29",
     "price": 6999,
     "brand": "Brand C",
-    ratings: []
+    ratings: {}
   },
   {
     "id": 30,
@@ -237,7 +237,7 @@ const PRODUCTS = [
     "name": "Product 30",
     "price": 1599,
     "brand": "Brand D",
-    ratings: []
+    ratings: {}
   }
 ]
 
@@ -261,11 +261,25 @@ const getFilteredProducts = (brand, minPrice = 0, maxPrice = 100000 ) => {
   return PRODUCTS.filter(product => product.price >= Number(minPrice) && product.price <= Number(maxPrice) && (!brand || product.brand == brand))
 }
 
-const addProductRating = (id, rating) => {
+const addProductRating = (custId, id, rating) => {
   const product = PRODUCTS.find(product => product.id == Number(id))
 
   if(product) {
-    product.ratings.push(Number(rating))
+    product.ratings[custId] = rating
+  }
+}
+
+const getProductName = (id) => {
+  const product = PRODUCTS.find(product => product.id === Number(id))
+  if(product) {
+    return product.name
+  }
+}
+
+const getProductPrice = (id) => {
+  const product = PRODUCTS.find(product => product.id === Number(id))
+  if(product) {
+    return product.price
   }
 }
 
@@ -276,4 +290,6 @@ module.exports = {
   getSearchedProducts,
   getFilteredProducts,
   addProductRating,
+  getProductName,
+  getProductPrice
 }

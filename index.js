@@ -4,6 +4,8 @@ const productRoutes = require('./src/modules/product/product.route')
 const customerRoutes = require('./src/modules/customer/customer.route')
 const cartRoutes = require('./src/modules/cart/cart.route')
 const orderRoutes = require('./src/modules/order/order.route')
+const dotenv = require('dotenv')
+dotenv.config()
 
 const app = express()
 
@@ -57,9 +59,9 @@ app.listen(3000, () => {
         - Add to cart ✅
         - Delete from cart ✅
       - Order (For individual customers)
-        - Place order
-        - Get orders by customer ID
-        - Get order by ID
+        - Place order ✅
+        - Get orders by customer ID ✅
+        - Get order by ID ✅
 
     # Resources:
       - Express routing: https://expressjs.com/en/guide/routing.html#routing

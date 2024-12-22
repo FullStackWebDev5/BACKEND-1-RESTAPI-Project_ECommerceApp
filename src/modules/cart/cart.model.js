@@ -1,8 +1,8 @@
 let CART = [
   {
     customerId: 1,
-    productId: 10,
-    quantity: 1
+    productId: 12,
+    quantity: 7
   },
   {
     customerId: 2,
@@ -11,8 +11,8 @@ let CART = [
   },
   {
     customerId: 1,
-    productId: 20,
-    quantity: 1
+    productId: 27,
+    quantity: 4
   }
 ]
 

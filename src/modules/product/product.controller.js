@@ -53,6 +53,7 @@ const getFilteredProducts = (req, res) => {
 }
 
 const addProductRating = (req, res) => {
+  const custId = req.user.id
   const { id } = req.params
   const { rating } = req.body
 
@@ -63,7 +64,7 @@ const addProductRating = (req, res) => {
     })
   }
 
-  productModel.addProductRating(id, rating)
+  productModel.addProductRating(custId, id, rating)
   res.json({
     status: 'SUCCESS',
     data: 'Rated product successfully!'
