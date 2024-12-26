@@ -4,8 +4,16 @@ const customerModel = require('./customer.model')
 const signup = (req, res) => {
   const { name, email, password } = req.body
   const newCustomer = { name, email, password }
+
+  if(!name || !email || !password) {
+    return res.status(400).json({
+      status: 'FAILED',
+      message: 'Missing details'
+    })
+  }
+
   customerModel.addCustomer(newCustomer)
-  res.send({
+  res.status(201).send({
     status: 'SUCCESS',
     message: 'Customer signed up successfully'
   })
