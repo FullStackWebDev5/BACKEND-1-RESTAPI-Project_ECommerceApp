@@ -23,7 +23,7 @@ app.use('/api/orders', orderRoutes)
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerJSON));
 
 app.get('/', (req, res) => {
-  res.json('Welcome to ECommerce App')
+  res.send('Welcome to ECommerce App')
 })
 
 app.get('*', (req, res) => {
